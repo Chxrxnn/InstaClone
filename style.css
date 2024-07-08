@@ -1,0 +1,632 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;900&family=Bungee+Spice&family=Honk&family=Pacifico&family=Poetsen+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    background-color: black;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+
+}
+
+.navTop{
+    display: none;
+}
+
+#navbar{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    height: 100vh;
+    width:250px;
+    /*border: 2px solid white;*/
+    position: fixed;
+    border-right: 1px solid rgb(59, 56, 56);
+}
+
+
+#logo{
+    margin: 20px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.box{
+    display: flex;
+    font-weight: 500;
+    padding: 15px;
+    transition: .5s;
+    /*margin-bottom: 30px;*/
+   /* border: 2px solid white;*/
+}
+
+.box:hover{
+    background-color: rgb(59, 56, 56);
+    border-radius: 7px;
+    width:200px;
+    margin-left: 25px;
+    /*margin: auto;*/
+    cursor:pointer;
+}
+.nIcon{
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.box span{
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+#more{
+    margin-top: 30px;
+}
+
+#section{
+    position: absolute;
+    left: 250px;
+    /*border: 2px solid white;*/
+    
+}
+
+#stories{
+    display: flex;
+    width: 730px;
+    justify-content: space-around;
+}
+
+.nIcon img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: fill;
+    
+}
+
+#aside{
+    position: absolute;
+    right: 0;
+}
+#container{
+    width: 100%;
+}
+
+
+.circle,.headerPic{
+    position: relative;
+    width: 70px;
+    height: 100px;
+    /*object-fit: cover;*/
+   overflow: hidden;
+  padding: 2px;
+   }
+
+   .headerPic{
+    display: inline-block;
+    height: 65px;
+    overflow: visible;
+    
+}
+.headerPic .picDetails{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    left: 65px;
+    height: 65px;
+   
+    font-size: smaller;
+}
+
+.circle img,.headerPic .pic{
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    border-radius:30px ;
+    object-fit: fill;
+    border: 2px solid black;
+    
+}
+
+.headerPic .pic{
+    width: 50px;
+    height: 50px;
+}
+.circle::before,.headerPic::before{
+    content: "";
+    position: absolute;
+    top:-0.5px;
+    left:-0.10px;
+    width: 65px;
+    height: 65px;
+    background-image: linear-gradient(-285deg,yellow,red,blue);
+    border-radius:32px ;
+    z-index: -1;
+
+}
+.headerPic::before{
+    width: 54px;
+    height: 54px;
+}
+.circle::after{
+    
+    position: absolute;
+    content: attr(data-style);
+    left: 5px;
+    bottom: 15px;
+    font-size: small;
+    
+}
+
+#stories{
+    margin: 20px;
+    width:700px;
+}
+
+
+
+.time{
+    color: rgb(148, 139, 139);
+    margin-left: 5px;
+}
+
+.picDetails{
+    display: flex;
+    /*justify-content: space-evenly;*/
+    
+}
+
+.name{
+    display: flex;
+    /*border: 2px solid white;*/
+    width: 200px;
+    margin-right: 5px;
+}
+.location,.song,.name{
+    margin-bottom: 5px;
+}
+.picId{
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.song .songIcon{
+    width: 10px;
+}
+
+.postHeader{
+    display: flex;
+    width: 500px;
+   /* border: 2px solid white;*/
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+.location,.song{
+    font-size: small;
+}
+.option{
+  /*  border:2px solid white;*/
+    width: 20px;
+    height: 50px;
+    align-self: center;
+}
+
+.headerLeft{
+    width: 300px;
+   /* border:2px solid white;*/
+}
+
+.post img{
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 3px;
+
+}
+.post{
+    border: 1px solid rgb(75, 72, 72);
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 10px;
+   
+}
+
+.post video{
+    width: 500px;
+    height: 500px;
+
+}
+.postFooter{
+    margin-top: 5px;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.postFooterLeft{
+  /* border: 2px solid white;*/
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.likesCount{
+    font-size: small;
+}
+.postCaption{
+    margin-top: 5px;
+}
+.postId{
+    font-weight: bold;
+}
+
+.caption{
+    font-size: small;
+}
+
+.commentsCount{
+    margin-top: 5px;
+
+}
+.commentsCount a{
+    color: rgb(148, 139, 139);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.addComment{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(59, 56, 56);
+    margin-bottom: 30px;
+    padding: 5px;
+}
+
+.addComment input[type='text']{
+        width: 95%;
+        background-color: transparent;
+        border: none;
+}
+
+.emoji{
+    width: 5%;
+    /*border: 2px solid white;*/
+    text-align: end;
+}
+
+.likesCount{
+    margin-top: 5px;
+}
+
+svg,.pic{
+    cursor: pointer;
+}
+
+.postLower{
+    width: 500px;
+    margin: auto;
+}
+/*
+.asidePic{
+   /* border: 2px solid white;
+}
+*/
+#switch{
+    margin-top: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+#aside{
+    width: 370px;
+   
+}
+
+#switch>div{
+    display: flex;
+    align-items: center;
+}
+
+.subAside{
+    width: 250px;
+    margin: auto;
+}
+
+#switch a,#suggestions a{
+    text-decoration: none;
+    color:rgb(34, 107, 202);
+    font-weight: 300;
+    font-size: small;
+}
+#suggestions a:hover,#switch a:hover{
+    color:white;
+}
+#asideCap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.asideId{
+    display: block;
+    width:109px;
+    overflow: hidden;
+}
+
+.IdSuggestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.IdSuggestion>div{
+    display: flex;
+    align-items: center;
+}
+
+.asideDetails{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.asideDetails div,.asideId div{
+    width:106px;
+    font-size: small;
+    height: 15px;
+    margin-top: 5px;
+    overflow: hidden;
+    color: rgb(148, 139, 139);
+}
+
+.asideId span,.asideDetails>span{
+    /*border:2px solid white;*/
+    font-size: 14px;
+    font-weight: bold;
+}
+#cap2{
+    font-size: small;
+    cursor: pointer;
+}
+
+#cap2:hover{
+    color: rgb(148, 139, 139);
+}
+#cap1{
+    color: rgb(148, 139, 139);
+}
+
+#secondLogo{
+    display: none;
+}
+
+@media screen and (min-width:670px) and (max-width:1300px){
+    #firstLogo{
+        display: none;
+
+    }   
+    #secondLogo{
+        display: block;
+    }
+
+    .navText{
+        text-indent: 100%;
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    }
+
+    #navbar,.box{
+        width: 80px;
+    }
+  
+    #logo svg{
+        width: 30px;
+        height: 40px;
+         /*border: 2px solid white;*/
+        text-align: center;
+    }
+
+    .nIcon,#logo{
+        margin-left: 10px;
+       /* border: 2px solid white;*/
+    }
+
+    .nIcon{
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+    }
+    #navProfile{
+        width: 23px;
+    }
+
+    #logo{
+    margin-left: 24px;
+    width: 40px;
+}
+
+   #section,#sectionUpper{
+    left:82px;
+  /*  display: inline-block;*/
+   /* width: 1190px;*/
+    /*min-width: 500px;*/
+   /* border:2px solid white;*/
+   }
+
+   #sectionUpper{
+   /*display: flex;*/
+   width: 100%;
+   margin-top: 20px;
+   }
+
+   #stories{
+        width: 700px;
+        margin: auto;
+   }
+   #aside{
+    display: none;
+   }
+   
+   #section{
+    width: 88%;
+    overflow: hidden;
+   }
+
+   .box:hover{
+    width: 70px;
+    margin: 0px auto;
+    padding-left: 15px;
+    justify-content: center;
+}
+}
+
+@media screen and (max-width:670px) {
+    
+    .navText{
+        text-indent: 100%;
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    }
+
+    #aside{
+        display: none;
+    }
+
+    #navbar{
+        
+        flex-direction: row;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        z-index: 1;
+        background-color: black;
+        align-items: center;
+        border-top: 1px solid rgb(82, 76, 76);
+        justify-content: space-around;
+    }
+    .navHide{
+        display: none;
+    }
+    
+    .box{
+        width: 50px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .nIcon img{
+        width: 24px;
+    }
+    #more{
+        margin-top: 0px;
+    }
+
+    
+   .box:hover{
+    width: 50px;
+  /*  height: 100%;*/
+  
+   /* align-items: center;*/
+
+}
+
+    .navTop{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(82, 76, 76);
+        height: 65px;
+        width: 100%;
+    }
+
+    .navTop div{
+       /* border: 2px solid white;*/
+       display: flex;
+       align-items: center;
+
+    }
+
+    .navTop input[type="text"]{
+        padding: 10px;
+        background-color:rgb(82, 76, 76) ;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        width: 90%;
+        color:rgb(160, 155, 155);
+    }
+    .navTop .nIcon{
+        width: 30px;
+        height: 50px;
+    }
+    .nIcon{
+        margin: 10px;
+    }
+    #notes{
+        font-size: 25px;
+    }
+
+    #navTopRight{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+    }
+    
+        #stories{
+             width: 500px;
+             margin: auto;
+        }
+        .posts{
+            margin: auto;
+        }
+
+        #section{
+            margin-top: 10px;
+            width: 100%;
+            left: 5px;
+        }
+
+          .circle img{
+            height: 57px;
+            width: 57px;
+        }
+
+        .circle::before{
+            height: 61px;
+            width: 61px;
+        }
+        #firstLogo{
+            margin: 0 10px;
+        }
+
+        .circle:nth-child(7),.circle:nth-child(8){
+                display: none;
+        }
+
+        .posts,.post,.postLower,.postFooter{
+            max-width:450px;
+            min-width: 400px;
+        }
+        #sectionUpper{
+            max-width: 600px;
+        }
+        .postHeader,.post img, #sectionUpper,.nestedSection{
+            width: 100%;
+        }
+}
